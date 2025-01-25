@@ -1,84 +1,196 @@
-body {
-  font-family: Arial, sans-serif;
+/* Reset básico */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Estilos para a header */
 header {
-  background-color: #0073e6;
+  background-color: #4CAF50;
   color: white;
-  text-align: center;
   padding: 20px 0;
+  text-align: center;
+  border-bottom: 2px solid #388E3C;
 }
 
-h1 {
-  margin: 0;
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
+header p {
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+/* Estilos principais de layout */
 main {
-  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
 }
 
 footer {
-  text-align: center;
   background-color: #333;
   color: white;
-  padding: 10px;
+  text-align: center;
+  padding: 15px 0;
   position: fixed;
   bottom: 0;
   width: 100%;
 }
 
-button {
-  background-color: #0073e6;
-  color: white;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-button:hover {
-  background-color: #005bb5;
-}
-
-.profile-card {
-  display: inline-block;
-  margin: 10px;
-  padding: 15px;
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  width: 200px;
-}
-
-.profile-card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
-
-.profile-card h3 {
-  margin: 10px 0;
-}
-
-.profile-card .follow-btn {
-  background-color: #28a745;
-}
-
 #coins {
   text-align: center;
+  font-size: 1.2rem;
   margin: 20px 0;
 }
 
-.video-card {
-  background-color: white;
-  padding: 15px;
-  margin: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.button, .btn {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.video-card button {
+.button:hover, .btn:hover {
+  background-color: #388E3C;
+}
+
+input, textarea {
   width: 100%;
+  padding: 12px 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+input:focus, textarea:focus {
+  border-color: #4CAF50;
+}
+
+/* Estilos para os Cards */
+.card {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+/* Estilos para os botões de ação */
+.watch-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.watch-btn:hover {
+  background-color: #388E3C;
+}
+
+.link-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.link-btn:hover {
+  background-color: #388E3C;
+}
+
+/* Layout para a tela de vídeos */
+.video-list {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.video-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 280px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos para a tela de links */
+.link-section {
+  background-color: #e1f5fe;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 40px;
+}
+
+.link-section input {
+  margin-top: 10px;
+}
+
+#add-link-section {
+  margin-top: 30px;
+  display: block;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.card-container .card {
+  width: 48%;
 }
