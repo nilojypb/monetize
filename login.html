@@ -8,19 +8,21 @@
 </head>
 <body>
   <header>
-    <h1>Login</h1>
+    <div class="header-content">
+      <h1>Bem-vindo de volta!</h1>
+      <p>Faça login para continuar assistindo vídeos e ganhando moedas.</p>
+    </div>
   </header>
 
   <main>
-    <form action="dashboard.html" method="POST">
-      <label for="email">E-mail:</label>
-      <input type="email" id="email" name="email" required>
-      
-      <label for="password">Senha:</label>
-      <input type="password" id="password" name="password" required>
-      
-      <button type="submit">Entrar</button>
-      <p>Ainda não tem uma conta? <a href="register.html">Cadastre-se</a></p>
+    <form action="#" method="POST" class="card">
+      <label for="username">Nome de Usuário ou E-mail</label>
+      <input type="text" id="username" name="username" required placeholder="Digite seu nome de usuário ou e-mail">
+
+      <label for="password">Senha</label>
+      <input type="password" id="password" name="password" required placeholder="Digite sua senha">
+
+      <button type="submit" class="btn">Login</button>
     </form>
   </main>
 
