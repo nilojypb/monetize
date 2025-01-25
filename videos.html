@@ -8,7 +8,10 @@
 </head>
 <body>
   <header>
-    <h1>Vídeos para Assistir</h1>
+    <div class="header-content">
+      <h1>Assista e Ganhe Moedas!</h1>
+      <p>Acumule moedas assistindo vídeos e troque por links exclusivos.</p>
+    </div>
   </header>
 
   <main>
@@ -18,13 +21,19 @@
 
     <div class="video-list">
       <div class="video-card">
-        <p>Título do Vídeo 1</p>
-        <button onclick="watchVideo()">Assistir</button>
+        <p><strong>Título do Vídeo 1</strong></p>
+        <button class="watch-btn" onclick="watchVideo('Vídeo 1')">Assistir</button>
       </div>
       <div class="video-card">
-        <p>Título do Vídeo 2</p>
-        <button onclick="watchVideo()">Assistir</button>
+        <p><strong>Título do Vídeo 2</strong></p>
+        <button class="watch-btn" onclick="watchVideo('Vídeo 2')">Assistir</button>
       </div>
+    </div>
+
+    <div id="add-link-section" style="display: none;" class="link-section">
+      <h3>Adicionar Link de Vídeo ou Perfil</h3>
+      <input type="text" id="link-input" placeholder="Cole o link aqui" class="link-input">
+      <button onclick="addLink()" class="link-btn">Adicionar Link</button>
     </div>
   </main>
 
